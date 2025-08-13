@@ -1,0 +1,405 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Servicios - Del Río Legal</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;500;600;700&family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        primary: {
+                            50: '#f0f9ff',
+                            100: '#e0f2fe',
+                            200: '#bae6fd',
+                            300: '#7dd3fc',
+                            400: '#38bdf8',
+                            500: '#0ea5e9',
+                            600: '#0284c7',
+                            700: '#0369a1',
+                            800: '#075985',
+                            900: '#0c4a6e',
+                        },
+                        secondary: {
+                            50: '#f8fafc',
+                            100: '#f1f5f9',
+                            200: '#e2e8f0',
+                            300: '#cbd5e1',
+                            400: '#94a3b8',
+                            500: '#64748b',
+                            600: '#475569',
+                            700: '#334155',
+                            800: '#1e293b',
+                            900: '#0f172a',
+                        }
+                    },
+                    fontFamily: {
+                        'serif': ['Playfair Display', 'serif'],
+                        'sans': ['Inter', 'sans-serif']
+                    }
+                }
+            }
+        }
+    </script>
+    <style>
+        .page-header-bg {
+            background: linear-gradient(rgba(15, 23, 42, 0.85), rgba(15, 23, 42, 0.9)), url('https://images.unsplash.com/photo-1589829545856-d10d557cf95f?ixlib=rb-4.0.3') no-repeat center center/cover;
+        }
+        .service-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 20px 25px -5px rgba(0, 0, 0, 0.1), 0 10px 10px -5px rgba(0, 0, 0, 0.04);
+        }
+        .btn-primary {
+            transition: all 0.3s ease;
+        }
+        .btn-primary:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 10px 15px -3px rgba(2, 132, 199, 0.3);
+        }
+    </style>
+</head>
+<body class="font-sans bg-secondary-50 text-secondary-800">
+    <!-- Header -->
+    <header class="fixed w-full bg-white shadow-md z-50">
+        <div class="container mx-auto px-4 py-4 flex justify-between items-center">
+            <div class="flex items-center">
+                <!-- Logo -->
+                <a href="index.html" class="text-2xl font-serif font-bold text-primary-600">
+                    <img src="./img/logo_delriolegal.jpg" alt="Del Río Legal Logo" class="h-12">
+                </a>
+            </div>
+            
+            <nav class="hidden md:flex space-x-8">
+                <a href="quienes-somos.html" class="text-secondary-700 hover:text-primary-600 font-medium">Quienes somos</a>
+                <a href="servicios.html" class="text-primary-600 hover:text-primary-600 font-medium">Servicios</a>
+                <a href="noticias.html" class="text-secondary-700 hover:text-primary-600 font-medium">Noticias</a>
+                <a href="contacto.html" class="text-secondary-700 hover:text-primary-600 font-medium">Contacto</a>
+            </nav>
+            
+            <div class="hidden md:block">
+                <a href="contacto.html" class="bg-primary-600 hover:bg-primary-700 text-white font-medium py-2 px-6 rounded-lg btn-primary inline-block">
+                    Agendar Consulta
+                </a>
+            </div>
+            
+            <div class="md:hidden">
+                <button id="menu-toggle" class="text-secondary-700">
+                    <i class="fas fa-bars text-2xl"></i>
+                </button>
+            </div>
+        </div>
+        
+        <!-- Mobile Menu -->
+        <div id="mobile-menu" class="hidden md:hidden bg-white py-4 px-4 shadow-lg">
+            <div class="flex flex-col space-y-4">
+                <a href="quienes-somos.html" class="text-secondary-700 hover:text-primary-600 font-medium">Quienes somos</a>
+                <a href="servicios.html" class="text-primary-600 hover:text-primary-600 font-medium">Servicios</a>
+                <a href="noticias.html" class="text-secondary-700 hover:text-primary-600 font-medium">Noticias</a>
+                <a href="contacto.html" class="text-secondary-700 hover:text-primary-600 font-medium">Contacto</a>
+                <a href="contacto.html" class="bg-primary-600 hover:bg-primary-700 text-white font-medium py-2 px-4 rounded-lg w-full text-center">
+                    Agendar Consulta
+                </a>
+            </div>
+        </div>
+    </header>
+
+    <!-- Page Header -->
+    <section class="page-header-bg pt-32 pb-20">
+        <div class="container mx-auto px-4 text-center">
+            <h1 class="text-4xl md:text-5xl font-serif text-white mb-6">Nuestros Servicios</h1>
+            <p class="text-xl text-secondary-100 max-w-3xl mx-auto">
+                Soluciones legales especializadas para cada necesidad, respaldadas 
+                por años de experiencia y un compromiso inquebrantable con la excelencia.
+            </p>
+        </div>
+    </section>
+
+    <!-- Services Section -->
+    <section class="py-20 bg-white">
+        <div class="container mx-auto px-4">
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+                <!-- Service Card 1 -->
+                <div class="service-card bg-secondary-50 rounded-xl p-8 shadow-md transition duration-300">
+                    <div class="w-16 h-16 bg-primary-100 rounded-full flex items-center justify-center mb-6">
+                        <i class="fas fa-balance-scale text-primary-600 text-2xl"></i>
+                    </div>
+                    <h3 class="text-2xl font-serif text-secondary-800 mb-4">Derecho Civil</h3>
+                    <p class="text-secondary-600 mb-6">
+                        Asesoramiento integral en contratos, responsabilidad civil, propiedad intelectual 
+                        y todas las ramas del derecho privado. Protegemos sus intereses con soluciones 
+                        jurídicas efectivas.
+                    </p>
+                    <div class="mb-6">
+                        <h4 class="font-semibold text-secondary-700 mb-2">Servicios incluidos:</h4>
+                        <ul class="text-secondary-600 text-sm space-y-1">
+                            <li>• Redacción y revisión de contratos</li>
+                            <li>• Responsabilidad civil y seguros</li>
+                            <li>• Propiedad intelectual</li>
+                            <li>• Derecho de obligaciones</li>
+                        </ul>
+                    </div>
+                    <a href="contacto.html" class="text-primary-600 font-medium flex items-center">
+                        Consultar
+                        <i class="fas fa-arrow-right ml-2 text-sm"></i>
+                    </a>
+                </div>
+                
+                <!-- Service Card 2 -->
+                <div class="service-card bg-secondary-50 rounded-xl p-8 shadow-md transition duration-300">
+                    <div class="w-16 h-16 bg-primary-100 rounded-full flex items-center justify-center mb-6">
+                        <i class="fas fa-building text-primary-600 text-2xl"></i>
+                    </div>
+                    <h3 class="text-2xl font-serif text-secondary-800 mb-4">Derecho Corporativo</h3>
+                    <p class="text-secondary-600 mb-6">
+                        Estructuración de empresas, fusiones y adquisiciones, contratos comerciales 
+                        y asesoría legal integral para el crecimiento de su negocio.
+                    </p>
+                    <div class="mb-6">
+                        <h4 class="font-semibold text-secondary-700 mb-2">Servicios incluidos:</h4>
+                        <ul class="text-secondary-600 text-sm space-y-1">
+                            <li>• Constitución de sociedades</li>
+                            <li>• Fusiones y adquisiciones</li>
+                            <li>• Contratos comerciales</li>
+                            <li>• Gobierno corporativo</li>
+                        </ul>
+                    </div>
+                    <a href="contacto.html" class="text-primary-600 font-medium flex items-center">
+                        Consultar
+                        <i class="fas fa-arrow-right ml-2 text-sm"></i>
+                    </a>
+                </div>
+                
+                <!-- Service Card 3 -->
+                <div class="service-card bg-secondary-50 rounded-xl p-8 shadow-md transition duration-300">
+                    <div class="w-16 h-16 bg-primary-100 rounded-full flex items-center justify-center mb-6">
+                        <i class="fas fa-gavel text-primary-600 text-2xl"></i>
+                    </div>
+                    <h3 class="text-2xl font-serif text-secondary-800 mb-4">Derecho Penal</h3>
+                    <p class="text-secondary-600 mb-6">
+                        Defensa penal especializada en delitos económicos, violencia doméstica 
+                        y delitos contra la administración pública. Protegemos sus derechos.
+                    </p>
+                    <div class="mb-6">
+                        <h4 class="font-semibold text-secondary-700 mb-2">Servicios incluidos:</h4>
+                        <ul class="text-secondary-600 text-sm space-y-1">
+                            <li>• Defensa en procesos penales</li>
+                            <li>• Delitos económicos</li>
+                            <li>• Violencia doméstica</li>
+                            <li>• Delitos contra la administración</li>
+                        </ul>
+                    </div>
+                    <a href="contacto.html" class="text-primary-600 font-medium flex items-center">
+                        Consultar
+                        <i class="fas fa-arrow-right ml-2 text-sm"></i>
+                    </a>
+                </div>
+                
+                <!-- Service Card 4 -->
+                <div class="service-card bg-secondary-50 rounded-xl p-8 shadow-md transition duration-300">
+                    <div class="w-16 h-16 bg-primary-100 rounded-full flex items-center justify-center mb-6">
+                        <i class="fas fa-home text-primary-600 text-2xl"></i>
+                    </div>
+                    <h3 class="text-2xl font-serif text-secondary-800 mb-4">Derecho Inmobiliario</h3>
+                    <p class="text-secondary-600 mb-6">
+                        Asesoramiento en compraventas, arrendamientos, urbanismo y regulación 
+                        de propiedad horizontal. Soluciones integrales para el sector inmobiliario.
+                    </p>
+                    <div class="mb-6">
+                        <h4 class="font-semibold text-secondary-700 mb-2">Servicios incluidos:</h4>
+                        <ul class="text-secondary-600 text-sm space-y-1">
+                            <li>• Compraventa de inmuebles</li>
+                            <li>• Contratos de arrendamiento</li>
+                            <li>• Urbanismo y construcción</li>
+                            <li>• Propiedad horizontal</li>
+                        </ul>
+                    </div>
+                    <a href="contacto.html" class="text-primary-600 font-medium flex items-center">
+                        Consultar
+                        <i class="fas fa-arrow-right ml-2 text-sm"></i>
+                    </a>
+                </div>
+                
+                <!-- Service Card 5 -->
+                <div class="service-card bg-secondary-50 rounded-xl p-8 shadow-md transition duration-300">
+                    <div class="w-16 h-16 bg-primary-100 rounded-full flex items-center justify-center mb-6">
+                        <i class="fas fa-users text-primary-600 text-2xl"></i>
+                    </div>
+                    <h3 class="text-2xl font-serif text-secondary-800 mb-4">Derecho Laboral</h3>
+                    <p class="text-secondary-600 mb-6">
+                        Asesoramiento a empresas y trabajadores en relaciones laborales, despidos, 
+                        negociación colectiva y seguridad social.
+                    </p>
+                    <div class="mb-6">
+                        <h4 class="font-semibold text-secondary-700 mb-2">Servicios incluidos:</h4>
+                        <ul class="text-secondary-600 text-sm space-y-1">
+                            <li>• Contratos laborales</li>
+                            <li>• Despidos y finiquitos</li>
+                            <li>• Negociación colectiva</li>
+                            <li>• Seguridad social</li>
+                        </ul>
+                    </div>
+                    <a href="contacto.html" class="text-primary-600 font-medium flex items-center">
+                        Consultar
+                        <i class="fas fa-arrow-right ml-2 text-sm"></i>
+                    </a>
+                </div>
+                
+                <!-- Service Card 6 -->
+                <div class="service-card bg-secondary-50 rounded-xl p-8 shadow-md transition duration-300">
+                    <div class="w-16 h-16 bg-primary-100 rounded-full flex items-center justify-center mb-6">
+                        <i class="fas fa-heart text-primary-600 text-2xl"></i>
+                    </div>
+                    <h3 class="text-2xl font-serif text-secondary-800 mb-4">Derecho de Familia</h3>
+                    <p class="text-secondary-600 mb-6">
+                        Divorcios, custodia de menores, sucesiones, adopciones y otros asuntos 
+                        familiares. Tratamos cada caso con sensibilidad y profesionalismo.
+                    </p>
+                    <div class="mb-6">
+                        <h4 class="font-semibold text-secondary-700 mb-2">Servicios incluidos:</h4>
+                        <ul class="text-secondary-600 text-sm space-y-1">
+                            <li>• Divorcios y separaciones</li>
+                            <li>• Custodia de menores</li>
+                            <li>• Sucesiones y testamentos</li>
+                            <li>• Adopciones</li>
+                        </ul>
+                    </div>
+                    <a href="contacto.html" class="text-primary-600 font-medium flex items-center">
+                        Consultar
+                        <i class="fas fa-arrow-right ml-2 text-sm"></i>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Process Section -->
+    <section class="py-20 bg-secondary-50">
+        <div class="container mx-auto px-4">
+            <div class="text-center mb-16">
+                <h2 class="text-3xl md:text-4xl font-serif text-secondary-800 mb-4">Nuestro Proceso</h2>
+                <div class="w-20 h-1 bg-primary-600 mx-auto"></div>
+                <p class="mt-6 text-secondary-600 max-w-2xl mx-auto">
+                    Un enfoque estructurado que garantiza resultados efectivos y comunicación transparente.
+                </p>
+            </div>
+            
+            <div class="grid grid-cols-1 md:grid-cols-4 gap-8">
+                <div class="text-center">
+                    <div class="w-16 h-16 bg-primary-600 text-white rounded-full flex items-center justify-center mx-auto mb-6 text-2xl font-bold">1</div>
+                    <h3 class="text-xl font-serif text-secondary-800 mb-4">Consulta Inicial</h3>
+                    <p class="text-secondary-600">Evaluamos su caso y definimos la estrategia legal más adecuada.</p>
+                </div>
+                <div class="text-center">
+                    <div class="w-16 h-16 bg-primary-600 text-white rounded-full flex items-center justify-center mx-auto mb-6 text-2xl font-bold">2</div>
+                    <h3 class="text-xl font-serif text-secondary-800 mb-4">Análisis Detallado</h3>
+                    <p class="text-secondary-600">Investigamos a fondo todos los aspectos relevantes de su situación legal.</p>
+                </div>
+                <div class="text-center">
+                    <div class="w-16 h-16 bg-primary-600 text-white rounded-full flex items-center justify-center mx-auto mb-6 text-2xl font-bold">3</div>
+                    <h3 class="text-xl font-serif text-secondary-800 mb-4">Estrategia Personalizada</h3>
+                    <p class="text-secondary-600">Desarrollamos una estrategia específica adaptada a sus necesidades.</p>
+                </div>
+                <div class="text-center">
+                    <div class="w-16 h-16 bg-primary-600 text-white rounded-full flex items-center justify-center mx-auto mb-6 text-2xl font-bold">4</div>
+                    <h3 class="text-xl font-serif text-secondary-800 mb-4">Ejecución y Seguimiento</h3>
+                    <p class="text-secondary-600">Implementamos la estrategia con comunicación constante y transparente.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- CTA Section -->
+    <section class="py-20 bg-primary-700 text-white">
+        <div class="container mx-auto px-4 text-center">
+            <h2 class="text-3xl md:text-4xl font-serif mb-6">¿Necesita Asesoramiento Legal?</h2>
+            <p class="text-xl text-primary-100 max-w-2xl mx-auto mb-10">
+                Nuestro equipo de expertos está listo para brindarle la mejor solución legal. 
+                Contáctenos para una consulta personalizada.
+            </p>
+            <a href="contacto.html" class="bg-white text-primary-700 hover:bg-primary-50 font-medium py-3 px-8 rounded-lg btn-primary inline-block">
+                Agendar Consulta Gratuita
+            </a>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-secondary-800 text-white pt-16 pb-8">
+        <div class="container mx-auto px-4">
+            <div class="grid grid-cols-1 md:grid-cols-4 gap-8 mb-12">
+                <div>
+                    <div class="text-2xl font-serif font-bold mb-4">Del Río Legal</div>
+                    <p class="text-secondary-300 mb-6">
+                        Bufete de abogados especializado en brindar soluciones legales 
+                        integrales con excelencia y compromiso.
+                    </p>
+                    <div class="flex space-x-4">
+                        <a href="#" class="text-secondary-300 hover:text-white transition duration-300">
+                            <i class="fab fa-facebook-f"></i>
+                        </a>
+                        <a href="#" class="text-secondary-300 hover:text-white transition duration-300">
+                            <i class="fab fa-twitter"></i>
+                        </a>
+                        <a href="#" class="text-secondary-300 hover:text-white transition duration-300">
+                            <i class="fab fa-linkedin-in"></i>
+                        </a>
+                        <a href="#" class="text-secondary-300 hover:text-white transition duration-300">
+                            <i class="fab fa-instagram"></i>
+                        </a>
+                    </div>
+                </div>
+                
+                <div>
+                    <h3 class="text-lg font-serif mb-4">Servicios</h3>
+                    <ul class="space-y-2">
+                        <li><a href="servicios.html" class="text-secondary-300 hover:text-white transition duration-300">Derecho Civil</a></li>
+                        <li><a href="servicios.html" class="text-secondary-300 hover:text-white transition duration-300">Derecho Corporativo</a></li>
+                        <li><a href="servicios.html" class="text-secondary-300 hover:text-white transition duration-300">Derecho Penal</a></li>
+                        <li><a href="servicios.html" class="text-secondary-300 hover:text-white transition duration-300">Derecho Inmobiliario</a></li>
+                        <li><a href="servicios.html" class="text-secondary-300 hover:text-white transition duration-300">Derecho Laboral</a></li>
+                    </ul>
+                </div>
+                
+                <div>
+                    <h3 class="text-lg font-serif mb-4">Enlaces Rápidos</h3>
+                    <ul class="space-y-2">
+                        <li><a href="index.html" class="text-secondary-300 hover:text-white transition duration-300">Inicio</a></li>
+                        <li><a href="servicios.html" class="text-secondary-300 hover:text-white transition duration-300">Servicios</a></li>
+                        <li><a href="noticias.html" class="text-secondary-300 hover:text-white transition duration-300">Noticias</a></li>
+                        <li><a href="contacto.html" class="text-secondary-300 hover:text-white transition duration-300">Contacto</a></li>
+                        <li><a href="contacto.html" class="text-secondary-300 hover:text-white transition duration-300">Agendar Consulta</a></li>
+                    </ul>
+                </div>
+                
+                <div>
+                    <h3 class="text-lg font-serif mb-4">Newsletter</h3>
+                    <p class="text-secondary-300 mb-4">
+                        Suscríbete para recibir nuestras últimas noticias y actualizaciones legales.
+                    </p>
+                    <form class="flex">
+                        <input type="email" placeholder="Tu email" class="px-4 py-2 w-full rounded-l-lg focus:outline-none text-secondary-800">
+                        <button class="bg-primary-600 hover:bg-primary-700 px-4 rounded-r-lg">
+                            <i class="fas fa-paper-plane"></i>
+                        </button>
+                    </form>
+                </div>
+            </div>
+            
+            <div class="border-t border-secondary-700 pt-8 text-center text-secondary-400">
+                <p>&copy; 2023 Del Río Legal. Todos los derechos reservados.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        // Mobile menu toggle
+        document.getElementById('menu-toggle').addEventListener('click', function() {
+            const menu = document.getElementById('mobile-menu');
+            menu.classList.toggle('hidden');
+        });
+    </script>
+</body>
+</html>
