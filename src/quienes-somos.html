@@ -72,7 +72,7 @@
             <div class="flex items-center">
                 <!-- Logo -->
                 <a href="index.html" class="text-2xl font-serif font-bold text-primary-600">
-                    <img src="./img/logo_delriolegal.jpg" alt="Del Río Legal Logo" class="h-12">
+                    <img src="/public/img/logo_delriolegal.jpg" alt="Del Río Legal Logo" class="h-20 md:h-20">
                 </a>
             </div>
             
@@ -84,7 +84,7 @@
             </nav>
             
             <div class="hidden md:block">
-                <a href="contacto.html" class="bg-primary-600 hover:bg-primary-700 text-white font-medium py-2 px-6 rounded-lg btn-primary inline-block">
+                <a href="contacto.html#formulario-consulta" class="bg-primary-600 hover:bg-primary-700 text-white font-medium py-2 px-6 rounded-lg btn-primary inline-block">
                     Agendar Consulta
                 </a>
             </div>
@@ -103,7 +103,7 @@
                 <a href="servicios.html" class="text-secondary-700 hover:text-primary-600 font-medium">Servicios</a>
                 <a href="noticias.html" class="text-secondary-700 hover:text-primary-600 font-medium">Noticias</a>
                 <a href="contacto.html" class="text-secondary-700 hover:text-primary-600 font-medium">Contacto</a>
-                <a href="contacto.html" class="bg-primary-600 hover:bg-primary-700 text-white font-medium py-2 px-4 rounded-lg w-full text-center">
+                <a href="contacto.html#formulario-consulta" class="bg-primary-600 hover:bg-primary-700 text-white font-medium py-2 px-4 rounded-lg w-full text-center">
                     Agendar Consulta
                 </a>
             </div>
@@ -113,10 +113,10 @@
     <!-- Page Header -->
     <section class="page-header-bg pt-32 pb-20">
         <div class="container mx-auto px-4 text-center">
-            <h1 class="text-4xl md:text-5xl font-serif text-white mb-6">Quiénes somos</h1>
+            <h1 class="text-4xl md:text-5xl font-serif text-white mb-6">Soluciones Legales que Entienden tu Negocio</h1>
             <p class="text-xl text-secondary-100 max-w-3xl mx-auto">
-                Conoce más sobre nuestra firma, nuestra historia, misión y visión que nos impulsa 
-                a brindar el mejor servicio legal a nuestros clientes.
+                Combinamos más de 25 años de experiencia como abogados in-house en empresas líderes,
+                lo que nos permite entender desde adentro las necesidades de nuestro clientes.
             </p>
         </div>
     </section>
@@ -176,42 +176,75 @@
     <!-- Footer -->
     <footer class="bg-secondary-800 text-white pt-16 pb-8">
         <div class="container mx-auto px-4">
-            <div class="grid grid-cols-1 md:grid-cols-2 gap-8 mb-12">
-                <!-- Contacto -->
-                <div>
-                    <h3 class="text-lg font-serif mb-4">Contacto</h3>
-                    <p class="text-secondary-300 mb-4">
-                        Para agendar una consulta o para más información, contáctenos:
+            <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-8 mb-12 auto-rows-fr">
+                <div class="sm:col-span-2 lg:col-span-1">
+                    <div class="text-2xl font-serif font-bold mb-4">Del Río Legal</div>
+                    <p class="text-secondary-300 mb-6">
+                        Bufete de abogados especializado en brindar soluciones legales 
+                        integrales con excelencia y compromiso.
                     </p>
-                    <div class="space-y-3">
-                        <div class="flex items-center">
-                            <i class="fas fa-envelope mr-3 text-primary-400"></i>
-                            <span class="text-secondary-300">hdelrio@delrio-legal.com</span>
-                        </div>
-                        <div class="flex items-center">
-                            <i class="fas fa-phone mr-3 text-primary-400"></i>
-                            <span class="text-secondary-300">+502 3484-0107</span>
-                        </div>
-                        <div class="flex items-center">
-                            <i class="fas fa-map-marker-alt mr-3 text-primary-400"></i>
-                            <span class="text-secondary-300">Guatemala, Guatemala</span>
-                        </div>
+
+                    <!-- Redes Sociales -->
+                    <!--
+                    <div class="flex space-x-4">
+                        <a href="#" class="text-secondary-300 hover:text-white transition duration-300">
+                            <i class="fab fa-facebook-f"></i>
+                        </a>
+                        <a href="#" class="text-secondary-300 hover:text-white transition duration-300">
+                            <i class="fab fa-twitter"></i>
+                        </a>
+                        <a href="#" class="text-secondary-300 hover:text-white transition duration-300">
+                            <i class="fab fa-linkedin-in"></i>
+                        </a>
+                        <a href="#" class="text-secondary-300 hover:text-white transition duration-300">
+                            <i class="fab fa-instagram"></i>
+                        </a>
                     </div>
+                    -->
                 </div>
                 
-                <!-- Enlaces Rápidos -->
+                <div>
+                    <h3 class="text-lg font-serif mb-4">Servicios</h3>
+                    <ul class="space-y-2">
+                        <li><a href="servicios.html" class="text-secondary-300 hover:text-white transition duration-300">Derecho Civil</a></li>
+                        <li><a href="servicios.html" class="text-secondary-300 hover:text-white transition duration-300">Derecho Corporativo</a></li>
+                        <li><a href="servicios.html" class="text-secondary-300 hover:text-white transition duration-300">Derecho Penal</a></li>
+                        <li><a href="servicios.html" class="text-secondary-300 hover:text-white transition duration-300">Derecho Inmobiliario</a></li>
+                        <li><a href="servicios.html" class="text-secondary-300 hover:text-white transition duration-300">Derecho Laboral</a></li>
+                    </ul>
+                </div>
+                
                 <div>
                     <h3 class="text-lg font-serif mb-4">Enlaces Rápidos</h3>
-                    <div class="space-y-2">
-                        <div><a href="quienes-somos.html" class="text-secondary-300 hover:text-white transition duration-300">Quiénes somos</a></div>
-                        <div><a href="servicios.html" class="text-secondary-300 hover:text-white transition duration-300">Servicios</a></div>
-                        <div><a href="noticias.html" class="text-secondary-300 hover:text-white transition duration-300">Noticias</a></div>
-                    </div>
+                    <ul class="space-y-2">
+                        <li><a href="index.html" class="text-secondary-300 hover:text-white transition duration-300">Inicio</a></li>
+                        <li><a href="servicios.html" class="text-secondary-300 hover:text-white transition duration-300">Servicios</a></li>
+                        <li><a href="noticias.html" class="text-secondary-300 hover:text-white transition duration-300">Noticias</a></li>
+                        <li><a href="contacto.html" class="text-secondary-300 hover:text-white transition duration-300">Contacto</a></li>
+                        <li><a href="contacto.html#formulario-consulta" class="text-secondary-300 hover:text-white transition duration-300">Agendar Consulta</a></li>
+                    </ul>
                 </div>
+                
+                <!-- Newsletter section - comentado para eliminar temporalmente -->
+                <!--
+                <div>
+                    <h3 class="text-lg font-serif mb-4">Newsletter</h3>
+                    <p class="text-secondary-300 mb-4">
+                        Suscríbete para recibir nuestras últimas noticias y actualizaciones legales.
+                    </p>
+                    <form class="flex">
+                        <input type="email" placeholder="Tu email" class="px-4 py-2 w-full rounded-l-lg focus:outline-none text-secondary-800">
+                        <button class="bg-primary-600 hover:bg-primary-700 px-4 rounded-r-lg">
+                            <i class="fas fa-paper-plane"></i>
+                        </button>
+                    </form>
+                </div>
+                -->
             </div>
             
+            
             <div class="border-t border-secondary-700 pt-8 text-center text-secondary-400">
-                <p>&copy; 2023 Del Río Legal. Todos los derechos reservados.</p>
+                <p>&copy; 2025 Del Río Legal. Todos los derechos reservados.</p>
             </div>
         </div>
     </footer>

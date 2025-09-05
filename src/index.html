@@ -69,7 +69,7 @@
             <div class="flex items-center">
                 <!-- Logo -->
                 <a href="index.html" class="text-2xl font-serif font-bold text-primary-600">
-                    <img src="./img/logo_delriolegal.jpg" alt="Del Río Legal Logo" class="h-12">
+                    <img src="/public/img/logo_delriolegal.jpg" alt="Del Río Legal Logo" class="h-20 md:h-20">
                 </a>
             </div>
             
@@ -81,7 +81,7 @@
             </nav>
             
             <div class="hidden md:block">
-                <a href="contacto.html" class="bg-primary-600 hover:bg-primary-700 text-white font-medium py-2 px-6 rounded-lg btn-primary inline-block">
+                <a href="contacto.html#formulario-consulta" class="bg-primary-600 hover:bg-primary-700 text-white font-medium py-2 px-6 rounded-lg btn-primary inline-block">
                     Agendar Consulta
                 </a>
             </div>
@@ -100,7 +100,7 @@
                 <a href="servicios.html" class="text-secondary-700 hover:text-primary-600 font-medium">Servicios</a>
                 <a href="noticias.html" class="text-secondary-700 hover:text-primary-600 font-medium">Noticias</a>
                 <a href="contacto.html" class="text-secondary-700 hover:text-primary-600 font-medium">Contacto</a>
-                <a href="contacto.html" class="bg-primary-600 hover:bg-primary-700 text-white font-medium py-2 px-4 rounded-lg w-full text-center">
+                <a href="contacto.html#formulario-consulta" class="bg-primary-600 hover:bg-primary-700 text-white font-medium py-2 px-4 rounded-lg w-full text-center">
                     Agendar Consulta
                 </a>
             </div>
@@ -110,10 +110,10 @@
     <!-- Hero Section -->
     <section class="hero-bg pt-32 pb-20">
         <div class="container mx-auto px-4 text-center">
-            <h1 class="text-4xl md:text-6xl font-serif text-white mb-6">Defensa Legal Expertizada</h1>
+            <h1 class="text-4xl md:text-6xl font-serif text-white mb-6">Asesoría Legal Integral con Experiencia Ejecutiva y Enfoque Empresarial</h1>
             <p class="text-xl text-secondary-100 max-w-3xl mx-auto mb-10">
-                Protegemos sus derechos con integridad, experiencia y compromiso. 
-                Más de 15 años brindando soluciones legales efectivas.
+                Más de 25 años de experiencia respaldando a empresas en todas sus necesidades.
+                Preparados para atender cualquier necesidad legal en cualquier sector.
             </p>
             <div class="flex flex-col sm:flex-row justify-center gap-4">
                 <a href="servicios.html" class="bg-primary-600 hover:bg-primary-700 text-white font-medium py-3 px-8 rounded-lg btn-primary inline-block">
@@ -207,12 +207,12 @@
                             <div class="text-secondary-600">Años de Experiencia</div>
                         </div>
                     </div>
-                    <a href="servicios.html" class="bg-primary-600 hover:bg-primary-700 text-white font-medium py-3 px-8 rounded-lg btn-primary inline-block">
+                    <a href="quienes-somos.html" class="bg-primary-600 hover:bg-primary-700 text-white font-medium py-3 px-8 rounded-lg btn-primary inline-block">
                         Conoce más sobre nosotros
                     </a>
                 </div>
-                <div>
-                    <img src="./img/hector-fotoperfil.jpg" alt="Equipo Del Río Legal" class="rounded-xl shadow-lg w-full">
+                <div class="flex justify-center">
+                    <img src="/public/img/hector-fotoperfil.jpeg" alt="Equipo Del Río Legal" class="rounded-xl shadow-lg w-3/4 md:w-2/3">
                 </div>
             </div>
         </div>
@@ -221,13 +221,16 @@
     <!-- Footer -->
     <footer class="bg-secondary-800 text-white pt-16 pb-8">
         <div class="container mx-auto px-4">
-            <div class="grid grid-cols-1 md:grid-cols-4 gap-8 mb-12">
-                <div>
+            <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-8 mb-12 auto-rows-fr">
+                <div class="sm:col-span-2 lg:col-span-1">
                     <div class="text-2xl font-serif font-bold mb-4">Del Río Legal</div>
                     <p class="text-secondary-300 mb-6">
                         Bufete de abogados especializado en brindar soluciones legales 
                         integrales con excelencia y compromiso.
                     </p>
+
+                    <!-- Redes Sociales -->
+                    <!--
                     <div class="flex space-x-4">
                         <a href="#" class="text-secondary-300 hover:text-white transition duration-300">
                             <i class="fab fa-facebook-f"></i>
@@ -242,6 +245,7 @@
                             <i class="fab fa-instagram"></i>
                         </a>
                     </div>
+                    -->
                 </div>
                 
                 <div>
@@ -262,10 +266,12 @@
                         <li><a href="servicios.html" class="text-secondary-300 hover:text-white transition duration-300">Servicios</a></li>
                         <li><a href="noticias.html" class="text-secondary-300 hover:text-white transition duration-300">Noticias</a></li>
                         <li><a href="contacto.html" class="text-secondary-300 hover:text-white transition duration-300">Contacto</a></li>
-                        <li><a href="contacto.html" class="text-secondary-300 hover:text-white transition duration-300">Agendar Consulta</a></li>
+                        <li><a href="contacto.html#formulario-consulta" class="text-secondary-300 hover:text-white transition duration-300">Agendar Consulta</a></li>
                     </ul>
                 </div>
                 
+                <!-- Newsletter section - comentado para eliminar temporalmente -->
+                <!--
                 <div>
                     <h3 class="text-lg font-serif mb-4">Newsletter</h3>
                     <p class="text-secondary-300 mb-4">
@@ -278,7 +284,9 @@
                         </button>
                     </form>
                 </div>
+                -->
             </div>
+            
             
             <div class="border-t border-secondary-700 pt-8 text-center text-secondary-400">
                 <p>&copy; 2025 Del Río Legal. Todos los derechos reservados.</p>

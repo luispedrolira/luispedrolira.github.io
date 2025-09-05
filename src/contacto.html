@@ -7,6 +7,9 @@
     <script src="https://cdn.tailwindcss.com"></script>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
     <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;500;600;700&family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    
+    <!-- EmailJS -->
+    <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js"></script>
     <script>
         tailwind.config = {
             theme: {
@@ -60,6 +63,11 @@
             transform: translateY(-5px);
             box-shadow: 0 20px 25px -5px rgba(0, 0, 0, 0.1), 0 10px 10px -5px rgba(0, 0, 0, 0.04);
         }
+        
+        /* Ajuste para que el scroll se posicione correctamente en el formulario */
+        #formulario-consulta {
+            scroll-margin-top: 5rem; /* Ajusta el espacio desde el top al hacer scroll */
+        }
     </style>
 </head>
 <body class="font-sans bg-secondary-50 text-secondary-800">
@@ -69,7 +77,7 @@
             <div class="flex items-center">
                 <!-- Logo -->
                 <a href="index.html" class="text-2xl font-serif font-bold text-primary-600">
-                    <img src="./img/logo_delriolegal.jpg" alt="Del Río Legal Logo" class="h-12">
+                    <img src="/public/img/logo_delriolegal.jpg" alt="Del Río Legal Logo" class="h-20 md:h-20">
                 </a>
             </div>
             
@@ -81,7 +89,7 @@
             </nav>
             
             <div class="hidden md:block">
-                <a href="contacto.html" class="bg-primary-600 hover:bg-primary-700 text-white font-medium py-2 px-6 rounded-lg btn-primary inline-block">
+                <a href="contacto.html#formulario-consulta" class="bg-primary-600 hover:bg-primary-700 text-white font-medium py-2 px-6 rounded-lg btn-primary inline-block">
                     Agendar Consulta
                 </a>
             </div>
@@ -100,7 +108,7 @@
                 <a href="servicios.html" class="text-secondary-700 hover:text-primary-600 font-medium">Servicios</a>
                 <a href="noticias.html" class="text-secondary-700 hover:text-primary-600 font-medium">Noticias</a>
                 <a href="contacto.html" class="text-primary-600 hover:text-primary-600 font-medium">Contacto</a>
-                <a href="contacto.html" class="bg-primary-600 hover:bg-primary-700 text-white font-medium py-2 px-4 rounded-lg w-full text-center">
+                <a href="contacto.html#formulario-consulta" class="bg-primary-600 hover:bg-primary-700 text-white font-medium py-2 px-4 rounded-lg w-full text-center">
                     Agendar Consulta
                 </a>
             </div>
@@ -129,7 +137,7 @@
                     </div>
                     <h3 class="text-xl font-serif text-secondary-800 mb-4">Ubicación</h3>
                     <p class="text-secondary-600">
-                        Guatemala, Guatemala
+                        3a ave 12-38 zona 10, <br> Edificio Paseo Plaza, nivel 9, oficina 902
                     </p>
                 </div>
 
@@ -138,9 +146,10 @@
                     <div class="w-16 h-16 bg-primary-100 rounded-full flex items-center justify-center mx-auto mb-6">
                         <i class="fas fa-phone-alt text-primary-600 text-2xl"></i>
                     </div>
-                    <h3 class="text-xl font-serif text-secondary-800 mb-4">Teléfono</h3>
+                    <h3 class="text-xl font-serif text-secondary-800 mb-4">Números Telefónicos</h3>
                     <p class="text-secondary-600">
-                        +502 3484-0107
+                        Oficina: +502 2277 3800 <br>
+                        Móvil: +502 3484 0107
                     </p>
                 </div>
 
@@ -159,7 +168,7 @@
     </section>
 
     <!-- Contact Form Section -->
-    <section class="py-20 bg-secondary-50">
+    <section id="formulario-consulta" class="py-20 bg-secondary-50">
         <div class="container mx-auto px-4">
             <div class="max-w-5xl mx-auto bg-white rounded-xl shadow-lg overflow-hidden">
                 <div class="md:flex">
@@ -175,7 +184,7 @@
                                 <i class="fas fa-map-marker-alt mt-1 mr-4 text-xl"></i>
                                 <div>
                                     <h4 class="font-medium mb-1">Dirección</h4>
-                                    <p>Guatemala, Guatemala</p>
+                                    <p>3a ave 12-38 zona 10, <br> Edificio Paseo Plaza, nivel 9, oficina 902</p>
                                 </div>
                             </div>
                             <div class="flex items-start">
@@ -192,6 +201,9 @@
                                     <p>hdelrio@delrio-legal.com</p>
                                 </div>
                             </div>
+
+                            <!-- Horario de atención -->
+                            <!--
                             <div class="flex items-start">
                                 <i class="fas fa-clock mt-1 mr-4 text-xl"></i>
                                 <div>
@@ -199,8 +211,11 @@
                                     <p>Lunes a Viernes: 9:00 - 18:00<br>Sábados: 10:00 - 14:00</p>
                                 </div>
                             </div>
+                            -->
                         </div>
                         
+                        <!-- Redes Sociales -->
+                        <!--
                         <div class="mt-10">
                             <h4 class="font-medium mb-4">Síguenos en Redes</h4>
                             <div class="flex space-x-4">
@@ -218,11 +233,12 @@
                                 </a>
                             </div>
                         </div>
+                        -->
                     </div>
                     
                     <div class="md:w-1/2 p-10">
                         <h3 class="text-2xl font-serif text-secondary-800 mb-6">Envíanos un Mensaje</h3>
-                        <form class="space-y-6">
+                        <form id="contact-form" class="space-y-6">
                             <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
                                 <div>
                                     <label for="firstName" class="block text-secondary-700 mb-2">Nombre</label>
@@ -263,6 +279,7 @@
                                 <textarea id="message" rows="5" class="w-full px-4 py-3 border border-secondary-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-primary-500" placeholder="Describe brevemente tu consulta o situación legal..." required></textarea>
                             </div>
                             
+                            <!--
                             <div class="flex items-start">
                                 <input type="checkbox" id="privacy" class="mt-1 mr-3">
                                 <label for="privacy" class="text-sm text-secondary-600">
@@ -270,6 +287,7 @@
                                     y el tratamiento de mis datos personales para fines de consulta legal.
                                 </label>
                             </div>
+                            -->
                             
                             <button type="submit" class="w-full bg-primary-600 hover:bg-primary-700 text-white font-medium py-3 px-6 rounded-lg btn-primary">
                                 Enviar Mensaje
@@ -293,14 +311,15 @@
                 </p>
             </div>
             
-            <div class="bg-secondary-100 h-96 rounded-xl flex items-center justify-center">
-                <div class="text-center">
-                    <i class="fas fa-map-marker-alt text-primary-600 text-4xl mb-4"></i>
-                    <p class="text-secondary-600">
-                        Mapa interactivo de Google Maps<br>
-                        <span class="text-sm">Integración de mapa disponible en sitio web final</span>
-                    </p>
-                </div>
+
+            <div class="bg-secondary-100 h-96 rounded-xl overflow-hidden shadow-lg">
+                <iframe 
+                    src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3860.979873592797!2d-90.51618618929203!3d14.600222385827282!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x8589a3690e4c1499%3A0x28f0be49657182e7!2sEdificio%20paseo%20plaza!5e0!3m2!1ses!2sgt!4v1756835610077!5m2!1ses!2sgt" 
+                    class="w-full h-full border-0" 
+                    allowfullscreen="" 
+                    loading="lazy" 
+                    referrerpolicy="no-referrer-when-downgrade">
+                </iframe>
             </div>
         </div>
     </section>
@@ -315,6 +334,9 @@
                         Bufete de abogados especializado en brindar soluciones legales 
                         integrales con excelencia y compromiso.
                     </p>
+
+                    <!-- Redes Sociales -->
+                    <!--
                     <div class="flex space-x-4">
                         <a href="#" class="text-secondary-300 hover:text-white transition duration-300">
                             <i class="fab fa-facebook-f"></i>
@@ -329,6 +351,7 @@
                             <i class="fab fa-instagram"></i>
                         </a>
                     </div>
+                    -->
                 </div>
                 
                 <div>
@@ -349,10 +372,12 @@
                         <li><a href="servicios.html" class="text-secondary-300 hover:text-white transition duration-300">Servicios</a></li>
                         <li><a href="noticias.html" class="text-secondary-300 hover:text-white transition duration-300">Noticias</a></li>
                         <li><a href="contacto.html" class="text-secondary-300 hover:text-white transition duration-300">Contacto</a></li>
-                        <li><a href="contacto.html" class="text-secondary-300 hover:text-white transition duration-300">Agendar Consulta</a></li>
+                        <li><a href="contacto.html#formulario-consulta" class="text-secondary-300 hover:text-white transition duration-300">Agendar Consulta</a></li>
                     </ul>
                 </div>
                 
+                <!-- Newsletter section - comentado para eliminar temporalmente -->
+                <!--
                 <div>
                     <h3 class="text-lg font-serif mb-4">Newsletter</h3>
                     <p class="text-secondary-300 mb-4">
@@ -365,6 +390,7 @@
                         </button>
                     </form>
                 </div>
+                -->
             </div>
             
             <div class="border-t border-secondary-700 pt-8 text-center text-secondary-400">
@@ -380,9 +406,75 @@
             menu.classList.toggle('hidden');
         });
 
-        // Form validation
-        document.querySelector('form').addEventListener('submit', function(e) {
+        // Pre-seleccionar área legal según parámetro de URL
+        document.addEventListener('DOMContentLoaded', function() {
+            // Inicializar EmailJS
+            emailjs.init("rRkB6G6QWNS5dfYYI"); // Reemplazar con tu Public Key de EmailJS
+            
+            // Obtener parámetros de la URL
+            const urlParams = new URLSearchParams(window.location.search);
+            const servicio = urlParams.get('servicio');
+            
+            console.log('URL actual:', window.location.href);
+            console.log('Parámetro servicio:', servicio);
+            
+            if (servicio) {
+                const serviceSelect = document.getElementById('service');
+                if (serviceSelect) {
+                    // Establecer el valor
+                    serviceSelect.value = servicio;
+                    
+                    // Verificar que se estableció correctamente
+                    console.log('Valor seleccionado:', serviceSelect.value);
+                    
+                    // Resaltar visualmente el campo para confirmación
+                    serviceSelect.style.borderColor = '#0ea5e9';
+                    serviceSelect.style.borderWidth = '2px';
+                    
+                    // Opcional: mostrar mensaje de confirmación
+                    setTimeout(() => {
+                        serviceSelect.style.borderColor = '';
+                        serviceSelect.style.borderWidth = '';
+                    }, 3000);
+                } else {
+                    console.error('No se encontró el elemento select con id "service"');
+                }
+            }
+        });
+
+        // Función para enviar email
+        function sendEmail(formData) {
+            const templateParams = {
+                from_name: `${formData.firstName} ${formData.lastName}`,
+                from_email: formData.email,
+                phone: formData.phone,
+                service_area: formData.service,
+                message: formData.message,
+                to_email: 'hdelrio@delrio-legal.com',
+                reply_to: formData.email,
+                submission_date: new Date().toLocaleString('es-GT', {
+                    timeZone: 'America/Guatemala',
+                    year: 'numeric',
+                    month: 'long',
+                    day: 'numeric',
+                    hour: '2-digit',
+                    minute: '2-digit'
+                })
+            };
+
+            return emailjs.send('service_delriolegal', 'template_agi7x2e', templateParams);
+        }
+
+        // Form validation y envío
+        document.getElementById('contact-form').addEventListener('submit', function(e) {
             e.preventDefault();
+            
+            const submitButton = this.querySelector('button[type="submit"]');
+            const originalText = submitButton.textContent;
+            
+            // Cambiar botón a estado de carga
+            submitButton.disabled = true;
+            submitButton.innerHTML = '<i class="fas fa-spinner fa-spin mr-2"></i>Enviando...';
             
             const requiredFields = this.querySelectorAll('[required]');
             let isValid = true;
@@ -396,16 +488,82 @@
                 }
             });
             
-            const privacy = document.getElementById('privacy');
-            if (!privacy.checked) {
-                isValid = false;
-                alert('Debes aceptar la política de privacidad para continuar.');
-            }
-            
             if (isValid) {
-                // Simulate form submission
-                alert('¡Mensaje enviado exitosamente! Nos pondremos en contacto contigo pronto.');
-                this.reset();
+                // Recopilar datos del formulario
+                const serviceSelect = document.getElementById('service');
+                const serviceText = serviceSelect.options[serviceSelect.selectedIndex].text;
+                
+                const formData = {
+                    firstName: document.getElementById('firstName').value,
+                    lastName: document.getElementById('lastName').value,
+                    email: document.getElementById('email').value,
+                    phone: document.getElementById('phone').value,
+                    service: serviceText, // Ahora usa el texto visible en lugar del value
+                    message: document.getElementById('message').value
+                };
+
+                // Enviar email
+                sendEmail(formData)
+                    .then(function(response) {
+                        console.log('SUCCESS!', response.status, response.text);
+                        
+                        // Mostrar mensaje de éxito
+                        const successMessage = document.createElement('div');
+                        successMessage.className = 'bg-green-100 border border-green-400 text-green-700 px-4 py-3 rounded mt-4';
+                        successMessage.innerHTML = `
+                            <div class="flex items-center">
+                                <i class="fas fa-check-circle mr-2"></i>
+                                <span>¡Mensaje enviado exitosamente! Nos pondremos en contacto contigo pronto.</span>
+                            </div>
+                        `;
+                        
+                        // Insertar mensaje después del formulario
+                        const form = document.getElementById('contact-form');
+                        form.parentNode.appendChild(successMessage);
+                        
+                        // Limpiar formulario
+                        form.reset();
+                        
+                        // Remover mensaje después de 5 segundos
+                        setTimeout(() => {
+                            successMessage.remove();
+                        }, 5000);
+                        
+                    })
+                    .catch(function(error) {
+                        console.error('FAILED...', error);
+                        
+                        // Mostrar mensaje de error
+                        const errorMessage = document.createElement('div');
+                        errorMessage.className = 'bg-red-100 border border-red-400 text-red-700 px-4 py-3 rounded mt-4';
+                        errorMessage.innerHTML = `
+                            <div class="flex items-center">
+                                <i class="fas fa-exclamation-triangle mr-2"></i>
+                                <span>Error al enviar el mensaje. Por favor, intenta nuevamente o contáctanos directamente.</span>
+                            </div>
+                        `;
+                        
+                        // Insertar mensaje después del formulario
+                        const form = document.getElementById('contact-form');
+                        form.parentNode.appendChild(errorMessage);
+                        
+                        // Remover mensaje después de 5 segundos
+                        setTimeout(() => {
+                            errorMessage.remove();
+                        }, 5000);
+                    })
+                    .finally(function() {
+                        // Restaurar botón
+                        submitButton.disabled = false;
+                        submitButton.textContent = originalText;
+                    });
+            } else {
+                // Restaurar botón si hay errores de validación
+                submitButton.disabled = false;
+                submitButton.textContent = originalText;
+                
+                // Mostrar mensaje de campos requeridos
+                alert('Por favor, completa todos los campos requeridos.');
             }
         });
     </script>
