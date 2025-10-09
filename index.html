@@ -134,14 +134,14 @@
             text-shadow: 0 0 10px rgba(14, 165, 233, 0.3);
         }
         
-        /* Pulse effect during counting */
+        /* Pulse effect during counting - optimized timing */
         @keyframes counterPulse {
             0%, 100% { transform: scale(1); }
             50% { transform: scale(1.05); }
         }
         
         .counter.counting {
-            animation: counterPulse 0.6s ease-in-out;
+            animation: counterPulse 0.4s ease-in-out; /* Reduced from 0.6s to 0.4s */
         }
         
         /* Institution Cards Styles */
@@ -341,7 +341,7 @@
                             <div class="text-secondary-600">Años de Experiencia</div>
                         </div>
                     </div>
-                    <a href="quienes-somos.html" class="bg-primary-600 hover:bg-primary-700 text-white font-medium py-3 px-8 rounded-lg btn-primary inline-block">
+                    <a href="quienes-somos.html#equipo" class="bg-primary-600 hover:bg-primary-700 text-white font-medium py-3 px-8 rounded-lg btn-primary inline-block">
                         Conoce más sobre nosotros
                     </a>
                 </div>
@@ -589,9 +589,13 @@
                     </div>
                     <h3 class="text-2xl font-serif text-secondary-800 mb-2">Héctor Del Río</h3>
                     <p class="text-primary-600 font-medium mb-4">Socio Fundador</p>
-                    <p class="text-secondary-600 leading-relaxed">
-                        Con más de 30 años de experiencia en el derecho empresarial y corporativo, Héctor lidera nuestro equipo con una visión estratégica que ha permitido obtener resultados excepcionales para nuestros clientes más importantes.
+                    <p class="text-secondary-600 leading-relaxed mb-6">
+                        Abogado, Consultor Corporativo y de Negocios con más de 25 años de experiencia liderando áreas legales y corporativas en empresas multinacionales. Su enfoque combina visión empresarial, experiencia jurídica y compromiso con la ética corporativa.
                     </p>
+                    <a href="equipo/hector-del-rio.html" class="inline-flex items-center bg-primary-600 hover:bg-primary-700 text-white font-medium py-3 px-6 rounded-lg transition-all duration-300 hover:shadow-lg">
+                        <span>Conocer más</span>
+                        <i class="fas fa-arrow-right ml-2"></i>
+                    </a>
                 </div>
             </div>
         </div>
@@ -610,9 +614,13 @@
                     </div>
                     <h3 class="text-2xl font-serif text-secondary-800 mb-2">Gabriela Mejía</h3>
                     <p class="text-primary-600 font-medium mb-4">Socia</p>
-                    <p class="text-secondary-600 leading-relaxed">
-                        Especialista en derecho laboral y corporativo, Gabriela aporta una perspectiva innovadora y detallada a cada caso. Su enfoque meticuloso y su amplio conocimiento la convierten en una pieza clave de nuestro equipo.
+                    <p class="text-secondary-600 leading-relaxed mb-6">
+                        Abogada y notaria con más de 25 años de experiencia acompañando empresas y personas en la resolución de desafíos jurídicos. Formada en la Universidad Francisco Marroquín y especializada en Derecho Mercantil en la Universidad de Salamanca.
                     </p>
+                    <a href="equipo/gabriela-mejia.html" class="inline-flex items-center bg-primary-600 hover:bg-primary-700 text-white font-medium py-3 px-6 rounded-lg transition-all duration-300 hover:shadow-lg">
+                        <span>Conocer más</span>
+                        <i class="fas fa-arrow-right ml-2"></i>
+                    </a>
                 </div>
             </div>
         </div>
@@ -631,9 +639,13 @@
                     </div>
                     <h3 class="text-2xl font-serif text-secondary-800 mb-2">Tito Santis</h3>
                     <p class="text-primary-600 font-medium mb-4">Socio</p>
-                    <p class="text-secondary-600 leading-relaxed">
-                        Experto en derecho civil e inmobiliario, Tito combina su sólida formación académica con una experiencia práctica que le permite ofrecer soluciones efectivas y estratégicas a nuestros clientes en los casos más complejos.
+                    <p class="text-secondary-600 leading-relaxed mb-6">
+                        Abogado y notario con más de 25 años de experiencia en asesoría legal corporativa y empresarial. Su trayectoria combina formación en Derecho Mercantil y Administración de Empresas con especialización en Finanzas y Banca.
                     </p>
+                    <a href="equipo/tito-santis.html" class="inline-flex items-center bg-primary-600 hover:bg-primary-700 text-white font-medium py-3 px-6 rounded-lg transition-all duration-300 hover:shadow-lg">
+                        <span>Conocer más</span>
+                        <i class="fas fa-arrow-right ml-2"></i>
+                    </a>
                 </div>
             </div>
         </div>
@@ -698,8 +710,8 @@
             }
         });
 
-        // Counter Animation
-        function animateCounter(element, target, duration = 2000) {
+        // Counter Animation - Optimized for better UX timing
+        function animateCounter(element, target, duration = 800) {
             const start = 0;
             const increment = target / (duration / 16); // 60 FPS
             let current = start;
@@ -732,8 +744,8 @@
                         const target = parseInt(counter.getAttribute('data-target'));
                         // Stagger the animation slightly for each counter
                         setTimeout(() => {
-                            animateCounter(counter, target, 2500);
-                        }, index * 200);
+                            animateCounter(counter, target, 700); // Reduced from 2500ms to 700ms
+                        }, index * 100); // Reduced stagger delay from 200ms to 100ms
                     });
                     // Unobserve after animation to prevent re-triggering
                     metricsObserver.unobserve(entry.target);
